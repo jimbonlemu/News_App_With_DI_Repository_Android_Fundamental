@@ -7,7 +7,7 @@ import com.jimbonlemu.newsapp.data.remote.retrofit.ApiConfig
 import com.jimbonlemu.newsapp.utils.AppExecutors
 
 object Injection {
-    fun provideRepository(context: Context) {
+    fun provideRepository(context: Context) :NewsRepository{
         val apiService = ApiConfig.getApiService()
         val database = NewsDatabase.getInstance(context)
         val dao = database.newsDao()

@@ -64,8 +64,8 @@ class NewsRepository private constructor(
             apiService: ApiService,
             newsDao: NewsDao,
             appExecutors: AppExecutors
-        ) {
-            instance ?: synchronized(this) {
+        ):NewsRepository{
+            return instance ?: synchronized(this) {
                 instance ?: NewsRepository(apiService, newsDao, appExecutors)
             }.also { instance = it }
         }
