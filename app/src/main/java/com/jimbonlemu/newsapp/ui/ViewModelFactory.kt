@@ -21,10 +21,10 @@ class ViewModelFactory private constructor(private val newsRepository: NewsRepos
     companion object {
         @Volatile
         private var instance: ViewModelFactory? = null
-        fun getInstance(context: Context): ViewModelFactory {
-            return instance ?: synchronized(this) {
+        fun getInstance(context: Context): ViewModelFactory =
+            instance ?: synchronized(this) {
                 instance ?: ViewModelFactory(Injection.provideRepository(context))
             }.also { instance = it }
-        }
+
     }
 }
