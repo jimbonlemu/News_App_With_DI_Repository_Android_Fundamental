@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.dicoding.newsapp.R
-import com.dicoding.newsapp.databinding.ItemNewsBinding
+import com.jimbonlemu.newsapp.R
 import com.jimbonlemu.newsapp.data.local.entity.NewsEntity
+import com.jimbonlemu.newsapp.databinding.ItemNewsBinding
 import com.jimbonlemu.newsapp.ui.NewsAdapter.MyViewHolder
 import com.jimbonlemu.newsapp.utils.DateFormatter
 

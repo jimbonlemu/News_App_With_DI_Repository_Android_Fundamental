@@ -2,7 +2,7 @@ package com.jimbonlemu.newsapp.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
-import com.dicoding.newsapp.BuildConfig
+import com.jimbonlemu.newsapp.BuildConfig
 import com.jimbonlemu.newsapp.data.local.entity.NewsEntity
 import com.jimbonlemu.newsapp.data.local.room.NewsDao
 import com.jimbonlemu.newsapp.data.remote.response.NewsResponse
@@ -57,16 +57,16 @@ class NewsRepository private constructor(
         return result
     }
 
-    companion object{
+    companion object {
         @Volatile
         private var instance: NewsRepository? = null
         fun getInstance(
-           apiService: ApiService,
-           newsDao: NewsDao,
-           appExecutors: AppExecutors
-        ){
-            instance?: synchronized(this){
-                instance?:NewsRepository(apiService, newsDao, appExecutors)
+            apiService: ApiService,
+            newsDao: NewsDao,
+            appExecutors: AppExecutors
+        ) {
+            instance ?: synchronized(this) {
+                instance ?: NewsRepository(apiService, newsDao, appExecutors)
             }.also { instance = it }
         }
     }

@@ -3,10 +3,10 @@ package com.jimbonlemu.newsapp.ui
 import android.os.Bundle
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
-import com.dicoding.newsapp.R
-import com.dicoding.newsapp.databinding.ActivityHomeBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.jimbonlemu.newsapp.R
+import com.jimbonlemu.newsapp.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
